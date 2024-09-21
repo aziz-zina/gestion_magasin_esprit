@@ -42,7 +42,7 @@ public class Main {
         // Q8
         System.out.println("Question 8:");
         produit1.dateExpiration = new Date(2022, 12, 31);
-        produit2.dateExpiration = new Date(2022, 12, 31);
-        produit3.dateExpiration = new Date(2022, 12, 31);
+        produit2.dateExpiration = new Date(2024, 8, 11);
+        produit3.dateExpiration = new Date(2024, 3, 21);
     }
 }
