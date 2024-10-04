@@ -1,4 +1,4 @@
-package com.medlink.cathbackend;
+package tn.tuniprob.gestionmagasin.entite;
 
 import java.util.Date;
 
