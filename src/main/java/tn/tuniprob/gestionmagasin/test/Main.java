@@ -63,7 +63,29 @@ public class Main {
         System.out.println(magasin1.toString());
         System.out.println(magasin2.toString());
 
-        System.out.println("Nombre total de produits: " + magasin1.getNbProduits());
+
+        // Prosit 3
+        // Q1
+        System.out.println("\nProdit 3, question 1");
+        System.out.println(produit1.getLibelle());
+        System.out.println(produit2.getLibelle());
+        System.out.println(produit3.getLibelle());
+        System.out.println(produit4.getLibelle());
+
+        // Q2
+        System.out.println("\nProdit 3, question 2");
+        System.out.println(produit1.toString());
+        System.out.println(produit2.toString());
+        System.out.println(produit3.toString());
+        System.out.println(produit4.toString());
+
+        // Q3
+        System.out.println("\nProdit 3, question 3");
         System.out.println("Nombre total de produits: " + Magasin.COMP);
+
+        // Q4
+        System.out.println("\nProdit 3, question 4");
+        System.out.println("Nombre total de produits: " + Magasin.COMP);
+
     }
 }

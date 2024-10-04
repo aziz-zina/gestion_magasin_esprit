@@ -90,4 +90,22 @@ public class Produit {
                 ", dateExpiration=" + dateExpiration +
                 '}';
     }
+
+    public boolean comparer(Produit produit) {
+        if (produit == null) {
+            return false;
+        }
+        return this.id.equals(produit.id) &&
+                this.libelle.equals(produit.libelle) &&
+                this.prix.equals(produit.prix);
+    }
+
+    public static boolean comparer(Produit produit1, Produit produit2) {
+        if (produit1 == null || produit2 == null) {
+            return false;
+        }
+        return produit1.id.equals(produit2.id) &&
+                produit1.libelle.equals(produit2.libelle) &&
+                produit1.prix.equals(produit2.prix);
+    }
 }

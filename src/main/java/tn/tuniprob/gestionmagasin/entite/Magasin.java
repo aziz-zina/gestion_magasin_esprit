@@ -36,6 +36,10 @@ public class Magasin {
     }
 
     public void ajouter(Produit p) {
+        if (chercherProduit(p)) {
+            System.out.println("Produit déjà existant");
+            return;
+        }
         if (nbProduits < CAPACITE) {
             produits[nbProduits] = p;
             nbProduits++;
@@ -47,5 +51,22 @@ public class Magasin {
 
     public int getNbProduits() {
         return nbProduits;
+    }
+
+    public boolean chercherProduit(Produit p) {
+        for (int i = 0; i < nbProduits; i++) {
+            if (produits[i].comparer(p)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Magasin comparerMagasins(Magasin m1, Magasin m2) {
+        if (m1.getNbProduits() > m2.getNbProduits()) {
+            return m1;
+        } else {
+            return m2;
+        }
     }
 }
