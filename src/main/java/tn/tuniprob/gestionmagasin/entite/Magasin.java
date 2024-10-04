@@ -1,13 +1,12 @@
-package com.medlink.cathbackend;
-
-import java.util.Arrays;
+package tn.tuniprob.gestionmagasin.entite;
 
 public class Magasin {
     private Integer id;
     private String adresse;
     private final int CAPACITE = 50;
     private Produit[] produits = new Produit[CAPACITE];
-    private static int nbProduits = 0;
+    private int nbProduits = 0;
+    public static int COMP;
 
     public Magasin(Integer id, String adresse) {
         this.id = id;
@@ -37,15 +36,37 @@ public class Magasin {
     }
 
     public void ajouter(Produit p) {
+        if (chercherProduit(p)) {
+            System.out.println("Produit déjà existant");
+            return;
+        }
         if (nbProduits < CAPACITE) {
             produits[nbProduits] = p;
             nbProduits++;
+            COMP++;
         } else {
             System.out.println("Capacite maximale atteinte");
         }
     }
 
-    public static int getNbProduits() {
+    public int getNbProduits() {
         return nbProduits;
+    }
+
+    public boolean chercherProduit(Produit p) {
+        for (int i = 0; i < nbProduits; i++) {
+            if (produits[i].comparer(p)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static Magasin comparerMagasins(Magasin m1, Magasin m2) {
+        if (m1.getNbProduits() > m2.getNbProduits()) {
+            return m1;
+        } else {
+            return m2;
+        }
     }
 }

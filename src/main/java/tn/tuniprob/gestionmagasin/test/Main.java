@@ -1,4 +1,7 @@
-package com.medlink.cathbackend;
+package tn.tuniprob.gestionmagasin.test;
+
+import tn.tuniprob.gestionmagasin.entite.Magasin;
+import tn.tuniprob.gestionmagasin.entite.Produit;
 
 import java.util.Date;
 
@@ -45,6 +48,8 @@ public class Main {
         produit2.setDateExpiration(new Date(2024, 8, 11));
         produit3.setDateExpiration(new Date(2024, 3, 21));
 
+        Produit produit4 = new Produit(3250, "brownie", "Saiida", 1.2, new Date(2024, 3, 21));
+
         // Prosit 2
         Magasin magasin1 = new Magasin(1, "123 Rue Principale");
         Magasin magasin2 = new Magasin(2, "456 Avenue Secondaire");
@@ -52,10 +57,35 @@ public class Main {
         magasin1.ajouter(produit1);
         magasin1.ajouter(produit2);
         magasin2.ajouter(produit3);
+        magasin2.ajouter(produit4);
+
 
         System.out.println(magasin1.toString());
         System.out.println(magasin2.toString());
 
-        System.out.println("Nombre total de produits: " + Magasin.getNbProduits());
+
+        // Prosit 3
+        // Q1
+        System.out.println("\nProdit 3, question 1");
+        System.out.println(produit1.getLibelle());
+        System.out.println(produit2.getLibelle());
+        System.out.println(produit3.getLibelle());
+        System.out.println(produit4.getLibelle());
+
+        // Q2
+        System.out.println("\nProdit 3, question 2");
+        System.out.println(produit1.toString());
+        System.out.println(produit2.toString());
+        System.out.println(produit3.toString());
+        System.out.println(produit4.toString());
+
+        // Q3
+        System.out.println("\nProdit 3, question 3");
+        System.out.println("Nombre total de produits: " + Magasin.COMP);
+
+        // Q4
+        System.out.println("\nProdit 3, question 4");
+        System.out.println("Nombre total de produits: " + Magasin.COMP);
+
     }
 }
