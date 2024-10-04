@@ -69,4 +69,24 @@ public class Magasin {
             return m2;
         }
     }
+
+    public void supprimerProduit(Produit p) {
+        if (!chercherProduit(p)) {
+            System.out.println("Produit non trouvé");
+            return;
+        }
+        for (int i = 0; i < nbProduits; i++) {
+            if (produits[i].comparer(p)) {
+                // Shift products to the left to fill the gap
+                for (int j = i; j < nbProduits - 1; j++) {
+                    produits[j] = produits[j + 1];
+                }
+                produits[nbProduits - 1] = null; // Clear the last product
+                nbProduits--;
+                COMP--;
+                System.out.println("Produit supprimé");
+                return;
+            }
+        }
+    }
 }
