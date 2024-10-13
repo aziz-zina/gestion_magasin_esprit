@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Produit {
 
-    private Integer id;
+    private int id;
     private String libelle;
     private String marque;
     private Double prix;
@@ -13,7 +13,7 @@ public class Produit {
     public Produit() {
     }
 
-    public Produit(Integer id, String libelle, String marque, Double prix, Date dateExpiration) {
+    public Produit(int id, String libelle, String marque, Double prix, Date dateExpiration) {
         this.id = id;
         this.libelle = libelle;
         this.marque = marque;
@@ -24,13 +24,13 @@ public class Produit {
         this.dateExpiration = dateExpiration;
     }
 
-    public Produit(Integer id, String libelle, String marque) {
+    public Produit(int id, String libelle, String marque) {
         this.id = id;
         this.libelle = libelle;
         this.marque = marque;
     }
 
-    public Produit(Integer id, String libelle, String marque, Double prix) {
+    public Produit(int id, String libelle, String marque, Double prix) {
         this.id = id;
         this.libelle = libelle;
         this.marque = marque;
@@ -95,7 +95,7 @@ public class Produit {
         if (produit == null) {
             return false;
         }
-        return this.id.equals(produit.id) &&
+        return this.id == (produit.id) &&
                 this.libelle.equals(produit.libelle) &&
                 this.prix.equals(produit.prix);
     }
@@ -104,7 +104,7 @@ public class Produit {
         if (produit1 == null || produit2 == null) {
             return false;
         }
-        return produit1.id.equals(produit2.id) &&
+        return produit1.id == (produit2.id) &&
                 produit1.libelle.equals(produit2.libelle) &&
                 produit1.prix.equals(produit2.prix);
     }
