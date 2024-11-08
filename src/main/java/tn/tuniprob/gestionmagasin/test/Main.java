@@ -2,6 +2,8 @@ package tn.tuniprob.gestionmagasin.test;
 
 import tn.tuniprob.gestionmagasin.entite.*;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 public class Main {
@@ -59,6 +61,7 @@ public class Main {
 
         magasin2.ajouter(produit3);
         magasin2.ajouter(produit4);
+
 
         // Q5
         System.out.println("\nDétails du magasin Carrefour:");
@@ -133,6 +136,8 @@ public class Main {
         //Q12
         magasin1.afficherNbEmployesParType();
         magasin2.afficherNbEmployesParType();
+
+
 
     }
 }
